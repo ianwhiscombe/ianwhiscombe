@@ -7,6 +7,14 @@ Specialising in React, JavaScript and CSS.
 
 Before this, over 15 years of leadership experience in the wine industry building happy, high-performing teams.
 
+🔭 I’m currently working on ... building my portfolio, still to come:
+
+- A Weather and Tide Times React app
+- Serverless integration including web cache
+- A basic API server
+- Some work intergrating third party services
+- Full stack app using React
+
 Skills: REACT / JS / HTML / CSS
 
 
@@ -22,7 +30,7 @@ Skills: REACT / JS / HTML / CSS
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
+
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
