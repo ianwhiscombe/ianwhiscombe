@@ -7,7 +7,7 @@ Specialising in React, JavaScript and CSS.
 
 Before this, over 15 years of leadership experience in the wine industry building happy, high-performing teams.
 
-🔭 I’m currently working on ... building my portfolio, still to come:
+🔭 I’m currently working on ... expanding my portfolio, still to come:
 
 - A Weather and Tide Times React app
 - Serverless integration including web cache
