@@ -1,21 +1,6 @@
 ### Hi there 👋, I'm Ian.
-Web Developer. 
 
-Building beautiful things for the www.
-
-Specialising in React, JavaScript and CSS.
-
-Before this, over 15 years of leadership experience in the wine industry building happy, high-performing teams.
-
-🔭 I’m currently working on ... expanding my portfolio, still to come:
-
-- A Weather and Tide Times React app
-- Serverless integration including web cache
-- A basic API server
-- Some work intergrating third party services
-- Full stack app using React
-
-Skills: REACT / JS / HTML / CSS
+A Product Manager that builds!
 
 📫 How to reach me:
 
