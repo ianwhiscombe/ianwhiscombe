@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bin Day — Design A</title>
+<style>
+  @font-face{font-family:Epilogue;src:url(../fonts/epilogue-latin.woff2) format('woff2');font-weight:400 800;font-display:swap}
+  @font-face{font-family:Karla;src:url(../fonts/karla-latin.woff2) format('woff2');font-weight:400 700;font-display:swap}
+  :root{
+    --surface:#F8EEEC; --ink:#1f1b1a; --ink-2:#594042;
+    --outline:#8d7071; --outline-v:#e1bec0;
+    --primary:#b11e3f; --primary-c:#d43a55; --on-primary:#fffbff;
+    --secondary:#a63b11; --tertiary:#6549af; --green:#00A669;
+    --charcoal:#342f2e;
+    --food:#a63b11; --recycling:#6549af; --glass:#b11e3f; --garden:#00A669; --rubbish:#342f2e;
+    --disp:Epilogue,system-ui,sans-serif; --body:Karla,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);background:var(--surface);color:var(--ink);
+    min-height:100dvh;padding:max(22px,env(safe-area-inset-top)) 20px calc(40px + env(safe-area-inset-bottom));
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:600px;margin:0 auto}
+  .caps{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+  /* Masthead */
+  .masthead{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:26px}
+  .masthead .brand{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:-.02em}
+  .masthead .addr{color:var(--ink-2);text-align:right;max-width:52%}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(18px);animation:rise .7s cubic-bezier(.2,.8,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.38s}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  section.block{border-radius:4px;padding:26px 24px 28px;margin-bottom:22px;position:relative}
+
+  /* This week — full-bleed colour block */
+  .hero{background:var(--primary);color:var(--on-primary)}
+  .hero .tagrow{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .pill{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:6px 13px;
+    font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    background:var(--on-primary);color:var(--primary)}
+  .pill.soon{background:#ffd0a3;color:#5a2a00}
+  .pill.today{background:var(--green);color:#fff;animation:beat 1.5s ease-in-out infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+  .day{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:.92;
+    font-size:clamp(56px,17vw,88px);margin:10px 0 2px}
+  .date{font-size:18px;font-weight:400;opacity:.92}
+  .est{display:inline-block;margin-left:8px;font-weight:700;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:3px 9px;opacity:.9}
+
+  /* Next week — flat tonal card */
+  .next{background:#fff;border:1px solid var(--outline-v)}
+  .next .day{font-size:clamp(38px,11vw,54px);color:var(--ink)}
+  .next .date{color:var(--ink-2);opacity:1}
+  .next .pill{background:var(--tertiary);color:#fff}
+
+  /* Bin tiles */
+  .bins{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+  .tile{flex:1 1 150px;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--outline-v);
+    border-radius:4px;padding:12px 13px;transition:transform .15s ease, box-shadow .15s ease, background .15s ease}
+  .hero .tile{border-color:transparent}
+  .chip{flex:none;width:42px;height:42px;border-radius:8px;display:grid;place-items:center;color:#fff}
+  .chip .ic{width:24px;height:24px}
+  .t-food .chip{background:var(--food)} .t-recycling .chip{background:var(--recycling)}
+  .t-glass .chip{background:var(--glass)} .t-garden .chip{background:var(--garden)} .t-rubbish .chip{background:var(--rubbish)}
+  .tile .txt{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .tile .name{display:block;font-family:var(--disp);font-weight:700;font-size:16px;line-height:1.05;color:var(--ink)}
+  .tile .sub{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+  @media(hover:hover){
+    .tile:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+    .t-food:hover{background:var(--food)} .t-recycling:hover{background:var(--recycling)}
+    .t-glass:hover{background:var(--glass)} .t-garden:hover{background:var(--garden)} .t-rubbish:hover{background:var(--rubbish)}
+    .tile:hover .name,.tile:hover .sub{color:#fff}
+    .tile:hover .chip{background:rgba(255,255,255,.22)}
+  }
+
+  /* Buttons */
+  .actions{margin:8px 0 30px}
+  .btn{width:100%;font-family:var(--disp);font-weight:700;font-size:17px;border-radius:4px;
+    padding:16px 20px;cursor:pointer;border:2px solid var(--primary);background:transparent;color:var(--primary);
+    display:flex;align-items:center;justify-content:center;gap:10px;transition:all .12s ease}
+  .btn .ic{width:20px;height:20px}
+  @media(hover:hover){.btn:hover{background:var(--primary);color:var(--on-primary);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}}
+
+  footer{border-top:2px solid var(--ink);padding-top:16px;color:var(--ink-2);font-size:14px;line-height:1.7}
+  footer a{color:var(--primary);font-weight:700}
+  .upd{font-size:12px;opacity:.8;margin-top:4px}
+
+  /* Icons idle motion */
+  .ic.spin{animation:spin 9s linear infinite;transform-origin:50% 50%}
+  .ic.sway{animation:sway 3.6s ease-in-out infinite;transform-origin:60% 90%}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+
+  /* Full calendar overlay */
+  .overlay{position:fixed;inset:0;background:var(--surface);z-index:20;display:none;flex-direction:column;
+    padding:max(18px,env(safe-area-inset-top)) 20px calc(30px + env(safe-area-inset-bottom))}
+  .overlay.open{display:flex;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .ohead{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:8px}
+  .ohead h2{font-family:var(--disp);font-weight:800;font-size:30px;letter-spacing:-.02em}
+  .close{border:2px solid var(--ink);background:transparent;border-radius:4px;width:44px;height:44px;
+    font-size:22px;cursor:pointer;color:var(--ink);line-height:1}
+  @media(hover:hover){.close:hover{background:var(--ink);color:var(--surface)}}
+  .olist{overflow:auto;padding:8px 2px 20px;max-width:600px;width:100%;margin:0 auto}
+  .mhead{font-family:var(--disp);font-weight:800;font-size:20px;letter-spacing:-.01em;
+    margin:22px 0 8px;color:var(--primary)}
+  .mhead:first-child{margin-top:8px}
+  .row{display:flex;align-items:center;gap:14px;padding:12px 4px;border-bottom:1px solid var(--outline-v)}
+  .row .dt{flex:none;width:78px}
+  .row .dnum{font-family:var(--disp);font-weight:800;font-size:20px;line-height:1}
+  .row .dday{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+  .row .mini{display:flex;gap:7px;flex-wrap:wrap;flex:1}
+  .mini .m{width:30px;height:30px;border-radius:6px;display:grid;place-items:center;color:#fff}
+  .mini .m .ic{width:18px;height:18px;animation:none}
+  .m-food{background:var(--food)}.m-recycling{background:var(--recycling)}.m-glass{background:var(--glass)}.m-garden{background:var(--garden)}.m-rubbish{background:var(--rubbish)}
+  .row .tagx{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);
+    border:1px solid var(--outline-v);border-radius:999px;padding:3px 8px}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{animation:none;opacity:1;transform:none}
+    .ic.spin,.ic.sway,.pill.today{animation:none}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="masthead reveal d1">
+      <div class="brand">Bin&nbsp;Day</div>
+      <div class="addr caps">55A Rectory Road<br>CO5 7HX</div>
+    </div>
+    <main id="app"></main>
+    <div class="actions reveal d4">
+      <button class="btn" id="openCal" type="button">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="1"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>
+        See the full calendar
+      </button>
+    </div>
+    <footer class="reveal d4">
+      <div>Out on your boundary by <strong>7am</strong> on collection day.</div>
+      <div class="upd" id="upd"></div>
+      <div style="margin-top:6px"><a href="https://www.colchester.gov.uk/collection-changes" target="_blank" rel="noopener">Colchester collection info →</a></div>
+    </footer>
+  </div>
+
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="ohead"><h2>Full calendar</h2><button class="close" id="closeCal" aria-label="Close">×</button></div>
+    <div class="olist" id="olist"></div>
+  </div>
+
+<script src="./core.js"></script>
+<script>
+(function(){
+  var B = window.BinDay;
+  function tiles(bins, prefixHover){
+    return '<div class="bins">' + bins.map(function(b){
+      return '<div class="tile t-'+b.key+'"><span class="chip">'+b.icon+'</span>'+
+        '<span class="txt"><span class="name">'+b.name+'</span><span class="sub">'+b.sub+'</span></span></div>';
+    }).join('') + '</div>';
+  }
+  function heroBlock(c){
+    return '<section class="block hero reveal d2">'+
+      '<div class="tagrow"><span class="pill '+c.count.cls+'">'+(c.count.days===0?'This week · Today':'This week')+'</span></div>'+
+      '<div class="day">'+c.day+'</div>'+
+      '<div class="date">'+c.date+(c.estimated?'<span class="est">estimated</span>':'')+' · <strong>'+c.count.txt+'</strong></div>'+
+      tiles(c.bins)+'</section>';
+  }
+  function nextBlock(c){
+    return '<section class="block next reveal d3">'+
+      '<div class="tagrow"><span class="pill">Next week</span></div>'+
+      '<div class="day">'+c.day+'</div>'+
+      '<div class="date">'+c.date+(c.estimated?' <span class="est">estimated</span>':'')+' · <strong>'+c.count.txt+'</strong></div>'+
+      tiles(c.bins)+'</section>';
+  }
+
+  var today = B.todayUTC();
+  var thisWk = B.nextFridayFrom(today);
+  var nextWk = thisWk + B.WEEK;
+  document.getElementById('app').innerHTML = heroBlock(B.collection(thisWk, today)) + nextBlock(B.collection(nextWk, today));
+
+  var now = new Date();
+  document.getElementById('upd').textContent = 'Showing collections as of ' + now.getDate() + ' ' + B.MONTHS[now.getMonth()] + ' ' + now.getFullYear() + '.';
+
+  // Full calendar
+  var list = B.upcoming(today, today, 26);
+  var html = '', curMonth = '';
+  list.forEach(function(c){
+    var mk = c.month + ' ' + c.year;
+    if (mk !== curMonth){ curMonth = mk; html += '<div class="mhead">'+mk+'</div>'; }
+    var mini = c.bins.map(function(b){ return '<span class="m m-'+b.key+'">'+b.icon+'</span>'; }).join('');
+    var d = new Date(c.ts);
+    html += '<div class="row"><div class="dt"><div class="dnum">'+d.getUTCDate()+'</div><div class="dday">'+c.day.slice(0,3)+'</div></div>'+
+      '<div class="mini">'+mini+'</div>'+(c.estimated?'<span class="tagx">est</span>':'')+'</div>';
+  });
+  document.getElementById('olist').innerHTML = html;
+
+  var ov = document.getElementById('overlay');
+  document.getElementById('openCal').onclick = function(){ ov.classList.add('open'); ov.setAttribute('aria-hidden','false'); };
+  document.getElementById('closeCal').onclick = function(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true'); };
+})();
+</script>
+</body>
+</html>
