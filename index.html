@@ -3,185 +3,298 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bin Day 🗑️ — 55A Rectory Road</title>
+<title>Bin Day — 55A Rectory Road</title>
 <meta name="description" content="This week's and next week's rubbish & recycling collections for 55A Rectory Road, CO5 7HX.">
-<meta name="theme-color" content="#12a594">
+<meta name="theme-color" content="#342f2e">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Bin Day">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%2312a594'/%3E%3Ctext x='90' y='128' font-size='104' text-anchor='middle'%3E%F0%9F%97%91%EF%B8%8F%3C/text%3E%3C/svg%3E">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%97%91%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%275.5%27%20fill%3D%27%23b11e3f%27/%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23fffbff%27%20stroke-width%3D%271.9%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M6%209.5A7%207%200%200%201%2016.2%207l1.6%201.6%27/%3E%3Cpath%20d%3D%27M18.2%204.4v4.4h-4.4%27/%3E%3Cpath%20d%3D%27M18%2014.6A7%207%200%200%201%207.8%2017l-1.6-1.6%27/%3E%3Cpath%20d%3D%27M5.8%2019.6v-4.4h4.4%27/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%275.5%27%20fill%3D%27%23b11e3f%27/%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23fffbff%27%20stroke-width%3D%271.9%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M6%209.5A7%207%200%200%201%2016.2%207l1.6%201.6%27/%3E%3Cpath%20d%3D%27M18.2%204.4v4.4h-4.4%27/%3E%3Cpath%20d%3D%27M18%2014.6A7%207%200%200%201%207.8%2017l-1.6-1.6%27/%3E%3Cpath%20d%3D%27M5.8%2019.6v-4.4h4.4%27/%3E%3C/g%3E%3C/svg%3E">
 <style>
+  @font-face{font-family:Epilogue;src:url(fonts/epilogue-latin.woff2) format('woff2');font-weight:400 800;font-display:swap}
+  @font-face{font-family:Karla;src:url(fonts/karla-latin.woff2) format('woff2');font-weight:400 700;font-display:swap}
   :root{
-    --food:#16a34a; --food-ink:#052e12;
-    --recycling:#0ea5e9; --recycling-ink:#062b3d;
-    --glass:#f59e0b; --glass-ink:#3a2600;
-    --garden:#65a30d; --garden-ink:#1a2a03;
-    --rubbish:#a855f7; --rubbish-ink:#2a0b47;
+    --surface:#F8EEEC; --ink:#1f1b1a; --ink-2:#594042; --outline-v:#e1bec0;
+    --primary:#b11e3f; --secondary:#fd7a4c; --secondary-d:#a63b11;
+    --tertiary:#6549af; --tertiary-c:#7e63ca; --green:#00A669; --charcoal:#342f2e;
+    --food:#a63b11; --recycling:#6549af; --glass:#b11e3f; --garden:#00A669; --rubbish:#342f2e;
+    --disp:Epilogue,system-ui,sans-serif; --body:Karla,system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    font-family:ui-rounded,"SF Pro Rounded",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    color:#0d1b2a;
-    min-height:100dvh;
-    padding:max(18px,env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom));
-    background:
-      radial-gradient(1200px 600px at 12% -10%, #ffe08a 0%, transparent 55%),
-      radial-gradient(1000px 700px at 110% 10%, #7ef0d8 0%, transparent 50%),
-      radial-gradient(900px 900px at 50% 120%, #a5b4ff 0%, transparent 55%),
-      linear-gradient(160deg,#12d0b3 0%,#12a594 45%,#2b7bd8 100%);
-    background-attachment:fixed;
+  body{font-family:var(--body);background:var(--surface);color:var(--ink);min-height:100dvh;overflow-x:hidden;
+    -webkit-font-smoothing:antialiased}
+  .caps{font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+
+  /* Marquee ribbon */
+  .ribbon{background:var(--charcoal);color:var(--surface);overflow:hidden;white-space:nowrap;padding:9px 0;border-bottom:2px solid var(--ink)}
+  .ribbon .track{display:inline-block;animation:slide 18s linear infinite}
+  .ribbon span{font-family:var(--disp);font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:0 22px}
+  .ribbon .dot{color:var(--secondary)}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .wrap{max-width:600px;margin:0 auto;padding:26px 20px calc(40px + env(safe-area-inset-bottom))}
+  h1{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:.98;font-size:clamp(38px,11vw,58px);margin:6px 0 24px}
+  h1 em{font-style:normal;color:var(--primary)}
+
+  /* Entrance */
+  .stagger{opacity:0;animation:pop .7s cubic-bezier(.18,.9,.28,1.3) forwards}
+  .s1{animation-delay:.05s}.s2{animation-delay:.18s}.s3{animation-delay:.32s}.s4{animation-delay:.46s}
+  @keyframes pop{0%{opacity:0;transform:translateY(34px) scale(.92)}100%{opacity:1;transform:none}}
+
+  .card{border-radius:14px;padding:24px 22px 26px;margin-bottom:26px;position:relative;border:2px solid var(--ink)}
+  .this{background:var(--primary);color:#fff;transform:rotate(-1.4deg);box-shadow:8px 8px 0 var(--charcoal)}
+  .next{background:#fff;color:var(--ink);transform:rotate(1.2deg);box-shadow:8px 8px 0 var(--tertiary)}
+  @media(hover:hover){
+    .card{transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .18s}
+    .this:hover{transform:rotate(0) translate(-2px,-2px);box-shadow:12px 12px 0 var(--charcoal)}
+    .next:hover{transform:rotate(0) translate(-2px,-2px);box-shadow:12px 12px 0 var(--tertiary)}
   }
-  .wrap{max-width:560px;margin:0 auto}
-  header{color:#fff;text-align:center;margin:6px 0 20px}
-  .kicker{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;opacity:.9}
-  h1{font-size:clamp(34px,10vw,52px);line-height:1;font-weight:900;margin:6px 0 8px;text-shadow:0 3px 0 rgba(0,0,0,.12)}
-  .addr{font-weight:700;font-size:15px;opacity:.95;background:rgba(255,255,255,.18);display:inline-block;padding:6px 14px;border-radius:999px;backdrop-filter:blur(4px)}
 
-  .card{
-    background:#fff;border-radius:28px;padding:22px 20px 24px;margin-bottom:18px;
-    box-shadow:0 18px 40px -14px rgba(6,24,44,.45),0 4px 0 rgba(0,0,0,.03);
-    position:relative;overflow:hidden;
+  .badge{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 14px;
+    font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;position:relative;z-index:2}
+  .this .badge{background:#fff;color:var(--primary)}
+  .next .badge{background:var(--tertiary);color:#fff}
+  .badge.today{background:var(--green);color:#fff}
+  /* Today pulse burst */
+  .burst{position:relative;display:inline-block}
+  .burst::before,.burst::after{content:"";position:absolute;inset:-4px;border-radius:999px;border:2px solid var(--green);
+    animation:ring 1.8s ease-out infinite;z-index:1}
+  .burst::after{animation-delay:.9s}
+  @keyframes ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.9);opacity:0}}
+
+  .day{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:.9;
+    font-size:clamp(54px,16vw,84px);margin:12px 0 2px}
+  .next .day{font-size:clamp(40px,12vw,60px)}
+  .date{font-size:17px;font-weight:400}
+  .this .date{opacity:.94}.next .date{color:var(--ink-2)}
+  .date strong{font-weight:700}
+  .est{display:inline-block;margin-left:6px;font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    border:1.5px solid currentColor;border-radius:999px;padding:2px 8px}
+
+  /* Sticker bin badges */
+  .bins{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+  .bin{display:flex;flex-direction:column;align-items:center;gap:8px;width:84px;text-align:center}
+  .disc{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;color:#fff;border:2px solid var(--ink);
+    box-shadow:3px 3px 0 rgba(0,0,0,.28);transition:transform .16s}
+  .disc .ic{width:32px;height:32px}
+  .b-food .disc{background:var(--food)}.b-recycling .disc{background:var(--recycling)}
+  .b-glass .disc{background:var(--glass)}.b-garden .disc{background:var(--garden)}.b-rubbish .disc{background:var(--rubbish)}
+  .bin .bn{font-family:var(--disp);font-weight:700;font-size:12.5px;line-height:1.1}
+  .this .bin .bn{color:#fff}.next .bin .bn{color:var(--ink)}
+  @media(hover:hover){.bin:hover .disc{transform:translateY(-4px) rotate(-4deg)}}
+
+  .btn{width:100%;font-family:var(--disp);font-weight:800;font-size:17px;border-radius:12px;
+    padding:17px 20px;cursor:pointer;border:2px solid var(--ink);background:var(--secondary);color:#3a1400;
+    display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:5px 5px 0 var(--ink);transition:all .14s}
+  .btn .ic{width:20px;height:20px}
+  @media(hover:hover){.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink);background:#ffd0a3}}
+  .btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+
+  footer{margin-top:30px;color:var(--ink-2);font-size:14px;line-height:1.7;border-top:2px solid var(--ink);padding-top:14px}
+  footer a{color:var(--primary);font-weight:700}
+  .upd{font-size:12px;opacity:.8;margin-top:4px}
+
+  .ic.spin{animation:spin 9s linear infinite;transform-origin:50% 50%}
+  .ic.sway{animation:sway 3.4s ease-in-out infinite;transform-origin:60% 90%}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+
+  /* Slide-over timeline modal */
+  .scrim{position:fixed;inset:0;background:rgba(31,27,26,.45);z-index:20;opacity:0;pointer-events:none;transition:opacity .3s}
+  .scrim.open{opacity:1;pointer-events:auto}
+  .sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;background:var(--surface);border-top-left-radius:22px;border-top-right-radius:22px;
+    border-top:3px solid var(--ink);max-height:88dvh;transform:translateY(102%);transition:transform .38s cubic-bezier(.2,.85,.25,1);
+    display:flex;flex-direction:column}
+  .sheet.open{transform:none}
+  .grab{width:44px;height:5px;border-radius:999px;background:var(--outline-v);margin:12px auto 4px}
+  .shead{display:flex;align-items:center;justify-content:space-between;padding:6px 22px 14px;border-bottom:2px solid var(--ink)}
+  .shead h2{font-family:var(--disp);font-weight:800;font-size:26px;letter-spacing:-.02em}
+  .close{border:2px solid var(--ink);background:transparent;border-radius:10px;width:42px;height:42px;font-size:22px;cursor:pointer;color:var(--ink)}
+  .tl{overflow:auto;padding:16px 22px 30px;max-width:600px;width:100%;margin:0 auto}
+  .mhead{font-family:var(--disp);font-weight:800;font-size:16px;letter-spacing:.02em;text-transform:uppercase;color:var(--primary);margin:20px 0 6px}
+  .mhead:first-child{margin-top:2px}
+  .stop{display:flex;align-items:center;gap:14px;padding:11px 0;position:relative;
+    opacity:0;transform:translateX(-14px)}
+  .sheet.open .stop{animation:slidein .5s cubic-bezier(.2,.8,.2,1) forwards}
+  @keyframes slidein{to{opacity:1;transform:none}}
+  .stop .node{flex:none;width:14px;height:14px;border-radius:999px;background:var(--primary);border:2px solid var(--ink);position:relative}
+  .stop .node::before{content:"";position:absolute;left:50%;top:16px;width:2px;height:34px;background:var(--outline-v);transform:translateX(-50%)}
+  .stop:last-child .node::before{display:none}
+  .stop .dt{flex:none;width:66px}
+  .stop .dnum{font-family:var(--disp);font-weight:800;font-size:18px;line-height:1}
+  .stop .dday{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
+  .stop .mini{display:flex;gap:8px;flex-wrap:wrap;flex:1}
+  .mini .m{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:#fff;border:1.5px solid var(--ink)}
+  .mini .m .ic{width:19px;height:19px;animation:none}
+  .m-food{background:var(--food)}.m-recycling{background:var(--recycling)}.m-glass{background:var(--glass)}.m-garden{background:var(--garden)}.m-rubbish{background:var(--rubbish)}
+  .tagx{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--outline-v);border-radius:999px;padding:2px 8px}
+
+  @media (prefers-reduced-motion: reduce){
+    .stagger,.stop{animation:none;opacity:1;transform:none}
+    .ribbon .track,.ic.spin,.ic.sway,.burst::before,.burst::after{animation:none}
+    .this,.next{transform:none}
   }
-  .card::before{content:"";position:absolute;inset:0 0 auto 0;height:10px}
-  .card.this::before{background:linear-gradient(90deg,#ff8a3d,#ffcf33)}
-  .card.next::before{background:linear-gradient(90deg,#7c5cff,#12b3d9)}
-  .card.next{opacity:.97}
-
-  .tag{display:inline-flex;align-items:center;gap:7px;font-weight:900;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:7px 13px;border-radius:999px;color:#fff}
-  .card.this .tag{background:linear-gradient(90deg,#ff7a2f,#ff9d33)}
-  .card.next .tag{background:linear-gradient(90deg,#6d5cff,#12a9d9)}
-
-  .when{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin:14px 0 4px}
-  .day{font-size:clamp(30px,9vw,44px);font-weight:900;line-height:1}
-  .date{font-size:16px;font-weight:700;color:#5b6b7b}
-  .count{margin-top:10px;display:inline-flex;align-items:center;gap:8px;font-weight:900;font-size:17px;
-    background:#0d1b2a;color:#fff;padding:8px 15px;border-radius:999px}
-  .count.soon{background:#e11d48}
-  .count.today{background:#16a34a;animation:pop 1.4s ease-in-out infinite}
-  @keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-
-  .est{display:inline-block;margin-top:10px;margin-left:8px;font-size:12px;font-weight:800;color:#8a6d00;background:#fff3c4;border:1px solid #ffe08a;padding:5px 10px;border-radius:999px}
-
-  .bins{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-  .bin{flex:1 1 140px;display:flex;align-items:center;gap:12px;padding:13px 14px;border-radius:18px;
-    color:#fff;font-weight:800;font-size:16px;box-shadow:inset 0 -3px 0 rgba(0,0,0,.14)}
-  .bin .emoji{font-size:26px;line-height:1;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
-  .bin small{display:block;font-weight:700;font-size:11.5px;opacity:.85;letter-spacing:.02em}
-  .b-food{background:var(--food)} .b-recycling{background:var(--recycling)}
-  .b-glass{background:var(--glass)} .b-garden{background:var(--garden)}
-  .b-rubbish{background:var(--rubbish)}
-
-  footer{text-align:center;color:#fff;margin-top:6px;font-size:13px;line-height:1.6}
-  footer a{color:#fff;font-weight:800}
-  .updated{opacity:.85;font-size:12px;margin-top:8px}
-  .ended{background:#fff;border-radius:24px;padding:26px 20px;text-align:center;font-weight:700;color:#0d1b2a}
 </style>
 </head>
 <body>
+  <div class="ribbon"><div class="track" id="track"></div></div>
   <div class="wrap">
-    <header>
-      <div class="kicker">🗑️ Bin Day</div>
-      <h1>What's out?</h1>
-      <div class="addr">55A Rectory Road, CO5&nbsp;7HX</div>
-    </header>
-    <main id="app"><!-- rendered by JS --></main>
-    <footer>
+    <h1 class="stagger s1">What's out <em>this week?</em></h1>
+    <main id="app"></main>
+    <button class="btn stagger s4" id="openCal" type="button">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="1"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>
+      See the full calendar
+    </button>
+    <footer class="stagger s4">
       <div>Out on your boundary by <strong>7am</strong> on collection day.</div>
-      <div class="updated" id="updated"></div>
-      <div style="margin-top:8px"><a href="https://www.colchester.gov.uk/collection-changes" target="_blank" rel="noopener">Colchester collection info ↗</a></div>
+      <div class="upd" id="upd"></div>
+      <div style="margin-top:6px"><a href="https://www.colchester.gov.uk/collection-changes" target="_blank" rel="noopener">Colchester collection info →</a></div>
     </footer>
   </div>
 
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sheet" aria-hidden="true">
+    <div class="grab"></div>
+    <div class="shead"><h2>Full calendar</h2><button class="close" id="closeCal" aria-label="Close">×</button></div>
+    <div class="tl" id="tl"></div>
+  </div>
+
 <script>
-(function(){
-  // ---- Collection model ---------------------------------------------------
-  // Collections are every Friday. Food waste goes out EVERY week.
-  // Weeks alternate between a "recycling" week (mixed recycling + glass + garden)
-  // and a "rubbish" week (non-recyclable general waste).
-  // Anchor: Friday 5 June 2026 was a RUBBISH week (Food + Non-recyclable),
-  // confirmed against the official Colchester calendar (29 May – 20 Nov 2026).
-  var ANCHOR = Date.UTC(2026, 5, 5);          // 5 Jun 2026 (Fri), rubbish week
-  var OFFICIAL_END = Date.UTC(2026, 10, 20);  // 20 Nov 2026, last printed date
+/* Bin Day — shared collection model + icon set (no emojis).
+   Reused by both design previews. Logic verified against the official
+   Colchester calendar (29 May – 20 Nov 2026). */
+(function (global) {
+  'use strict';
+
+  // Collections are every Friday. Food waste goes out EVERY week. Weeks
+  // alternate between a "recycling" week (mixed recycling + glass + garden)
+  // and a "rubbish" week (non-recyclable). Anchor: Fri 5 Jun 2026 = rubbish week.
+  var ANCHOR = Date.UTC(2026, 5, 5);
+  var OFFICIAL_END = Date.UTC(2026, 10, 20); // 20 Nov 2026, last printed date
   var DAY = 86400000, WEEK = 7 * DAY;
 
-  var BINS = {
-    food:      {cls:'b-food',      emoji:'🍎', name:'Food waste',     sub:'Every week'},
-    recycling: {cls:'b-recycling', emoji:'♻️', name:'Mixed recycling', sub:'Cans, paper, card, plastic'},
-    glass:     {cls:'b-glass',     emoji:'🫙', name:'Glass',           sub:'Bottles & jars'},
-    garden:    {cls:'b-garden',    emoji:'🌿', name:'Garden waste',    sub:'Grass & clippings'},
-    rubbish:   {cls:'b-rubbish',   emoji:'🗑️', name:'Non-recyclable',  sub:'General rubbish'}
+  // Hand-drawn line icons (24×24, stroke = currentColor). No emojis.
+  var ICONS = {
+    food: '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8.6C10.8 6.3 7.6 5.9 6 7.9c-1.7 2-1 5.7 1 8.1.9 1.1 2 1.7 3 1.7s2.1-.6 3-1.7c2-2.4 2.7-6.1 1-8.1-1.6-2-4.8-1.6-6 .7Z"/><path d="M12 8.6V4.8"/><path d="M12 4.8c0-1.6 1.4-2.5 3-2.3-.1 1.6-1.5 2.6-3 2.3Z"/></svg>',
+    recycling: '<svg class="ic spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9.5A7 7 0 0 1 16.2 7l1.6 1.6"/><path d="M18.2 4.4v4.4h-4.4"/><path d="M18 14.6A7 7 0 0 1 7.8 17l-1.6-1.6"/><path d="M5.8 19.6v-4.4h4.4"/></svg>',
+    glass: '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3h2v3.6l1.3 2.3c.2.4.3.8.3 1.2V20a1 1 0 0 1-1 1h-3.2a1 1 0 0 1-1-1V10.1c0-.4.1-.8.3-1.2L11 6.6V3Z"/><path d="M9.4 13h5.2"/></svg>',
+    garden: '<svg class="ic sway" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20c0-7.5 5.5-12.5 14.5-13.5C18.5 15 13 20 5 20Z"/><path d="M5 20c2.2-4.3 5.2-6.6 9.5-7.5"/></svg>',
+    rubbish: '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M9.5 7V5.2a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1V7"/><path d="M6.2 7l.9 12.8a1 1 0 0 0 1 1h7.8a1 1 0 0 0 1-1L17.8 7"/><path d="M10 11v6M14 11v6"/></svg>'
   };
+
+  var BINS = {
+    food:      {key:'food',      name:'Food waste',      sub:'Every week',              icon: ICONS.food},
+    recycling: {key:'recycling', name:'Mixed recycling',  sub:'Cans · paper · card · plastic', icon: ICONS.recycling},
+    glass:     {key:'glass',     name:'Glass',            sub:'Bottles & jars',          icon: ICONS.glass},
+    garden:    {key:'garden',    name:'Garden waste',     sub:'Grass & clippings',       icon: ICONS.garden},
+    rubbish:   {key:'rubbish',   name:'Non-recyclable',   sub:'General rubbish',         icon: ICONS.rubbish}
+  };
+
   var DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
-  // UTC-midnight of "today" (avoids timezone drift when comparing dates).
   function todayUTC(){ var n = new Date(); return Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()); }
+  function nextFridayFrom(from){ var d = new Date(from); return from + ((5 - d.getUTCDay() + 7) % 7) * DAY; }
 
-  // Next collection (a Friday) on or after `from`.
-  function nextFridayFrom(from){
-    var d = new Date(from);
-    var add = (5 - d.getUTCDay() + 7) % 7;    // 5 = Friday
-    return from + add * DAY;
-  }
-
-  // Which bins go out on a given Friday.
   function binsFor(ts){
     var weekIdx = Math.round((ts - ANCHOR) / WEEK);
-    var recyclingWeek = (weekIdx % 2 !== 0);  // anchor (idx 0) is a rubbish week
-    var list = ['food'];
-    if (recyclingWeek){ list.push('recycling','glass','garden'); }
-    else { list.push('rubbish'); }
-    return list;
+    var recyclingWeek = (weekIdx % 2 !== 0); // anchor (idx 0) is a rubbish week
+    return recyclingWeek ? ['food','recycling','glass','garden'] : ['food','rubbish'];
   }
 
   function fmtDate(ts){ var d = new Date(ts); return d.getUTCDate() + ' ' + MONTHS[d.getUTCMonth()] + ' ' + d.getUTCFullYear(); }
+  function fmtShort(ts){ var d = new Date(ts); return d.getUTCDate() + ' ' + MONTHS[d.getUTCMonth()].slice(0,3); }
   function dayName(ts){ return DAYS[new Date(ts).getUTCDay()]; }
 
   function countdown(ts, today){
     var days = Math.round((ts - today) / DAY);
-    if (days <= 0) return {txt:'Today! 🎉', cls:'today'};
-    if (days === 1) return {txt:'Tomorrow', cls:'soon'};
-    if (days <= 3) return {txt:'In ' + days + ' days', cls:'soon'};
-    return {txt:'In ' + days + ' days', cls:''};
+    if (days <= 0) return {txt:'Today', cls:'today', days:0};
+    if (days === 1) return {txt:'Tomorrow', cls:'soon', days:1};
+    if (days <= 3) return {txt:'In ' + days + ' days', cls:'soon', days:days};
+    return {txt:'In ' + days + ' days', cls:'', days:days};
   }
 
-  function binChips(list){
-    return list.map(function(k){
-      var b = BINS[k];
-      return '<div class="bin ' + b.cls + '"><span class="emoji">' + b.emoji + '</span>' +
-             '<span>' + b.name + '<small>' + b.sub + '</small></span></div>';
-    }).join('');
+  // A collection descriptor for templating.
+  function collection(ts, today){
+    return {
+      ts: ts, day: dayName(ts), date: fmtDate(ts), short: fmtShort(ts),
+      month: MONTHS[new Date(ts).getUTCMonth()], year: new Date(ts).getUTCFullYear(),
+      bins: binsFor(ts).map(function(k){ return BINS[k]; }),
+      count: countdown(ts, today), estimated: ts > OFFICIAL_END
+    };
   }
 
-  function collectionCard(ts, kind, today){
-    var isNext = kind === 'next';
-    var c = countdown(ts, today);
-    var estimated = ts > OFFICIAL_END;
-    return '<section class="card ' + kind + '">' +
-      '<span class="tag">' + (isNext ? '📆 Next week' : '⭐ This week') + '</span>' +
-      '<div class="when"><span class="day">' + dayName(ts) + '</span>' +
-        '<span class="date">' + fmtDate(ts) + '</span></div>' +
-      '<div><span class="count ' + c.cls + '">' + c.txt + '</span>' +
-        (estimated ? '<span class="est">estimated ✏️</span>' : '') + '</div>' +
-      '<div class="bins">' + binChips(binsFor(ts)) + '</div>' +
-      '</section>';
+  // All upcoming collections from `fromTs` to the official end, then continuing
+  // the fortnightly pattern for `extraWeeks` more (flagged estimated).
+  function upcoming(fromTs, today, extraWeeks){
+    var out = [], ts = nextFridayFrom(fromTs);
+    var end = Math.max(OFFICIAL_END, fromTs + (extraWeeks || 26) * WEEK);
+    while (ts <= end){ out.push(collection(ts, today)); ts += WEEK; }
+    return out;
   }
 
-  // ---- Render -------------------------------------------------------------
-  var today = todayUTC();
-  var thisWeek = nextFridayFrom(today);
-  var nextWeek = thisWeek + WEEK;
+  global.BinDay = {
+    BINS: BINS, ICONS: ICONS, MONTHS: MONTHS, DAYS: DAYS, WEEK: WEEK,
+    OFFICIAL_END: OFFICIAL_END, todayUTC: todayUTC, nextFridayFrom: nextFridayFrom,
+    binsFor: binsFor, countdown: countdown, collection: collection, upcoming: upcoming,
+    fmtDate: fmtDate, fmtShort: fmtShort, dayName: dayName
+  };
+})(window);
+</script>
+<script>
+(function(){
+  var B = window.BinDay;
+  // ribbon content (duplicated for seamless loop)
+  var seg = '<span>Out by 7am</span><span class="dot">◆</span><span>55A Rectory Road</span><span class="dot">◆</span><span>CO5 7HX</span><span class="dot">◆</span>';
+  document.getElementById('track').innerHTML = seg + seg;
 
-  document.getElementById('app').innerHTML =
-    collectionCard(thisWeek, 'this', today) +
-    collectionCard(nextWeek, 'next', today);
+  function binBadges(bins){
+    return '<div class="bins">' + bins.map(function(b){
+      return '<div class="bin b-'+b.key+'"><span class="disc">'+b.icon+'</span><span class="bn">'+b.name+'</span></div>';
+    }).join('') + '</div>';
+  }
+  function card(c, kind){
+    var isThis = kind==='this';
+    var label = isThis ? (c.count.days===0 ? 'This week' : 'This week') : 'Next week';
+    var badge = isThis && c.count.days===0
+      ? '<span class="burst"><span class="badge today">Today</span></span>'
+      : '<span class="badge">'+label+'</span>';
+    return '<section class="stagger '+(isThis?'s2':'s3')+'"><div class="card '+kind+'">'+
+      badge+
+      '<div class="day">'+c.day+'</div>'+
+      '<div class="date"><strong>'+c.date+'</strong>'+(c.estimated?' <span class="est">est</span>':'')+' · '+c.count.txt+'</div>'+
+      binBadges(c.bins)+'</div></section>';
+  }
+
+  var today = B.todayUTC();
+  var thisWk = B.nextFridayFrom(today), nextWk = thisWk + B.WEEK;
+  document.getElementById('app').innerHTML = card(B.collection(thisWk,today),'this') + card(B.collection(nextWk,today),'next');
 
   var now = new Date();
-  document.getElementById('updated').textContent =
-    'Showing collections as of ' + now.getDate() + ' ' + MONTHS[now.getMonth()] + ' ' + now.getFullYear() + '.';
+  document.getElementById('upd').textContent = 'Showing collections as of ' + now.getDate() + ' ' + B.MONTHS[now.getMonth()] + ' ' + now.getFullYear() + '.';
+
+  // Timeline
+  var list = B.upcoming(today, today, 26), html='', curMonth='', i=0;
+  list.forEach(function(c){
+    var mk = c.month+' '+c.year;
+    if(mk!==curMonth){curMonth=mk; html+='<div class="mhead">'+mk+'</div>';}
+    var mini = c.bins.map(function(b){return '<span class="m m-'+b.key+'">'+b.icon+'</span>';}).join('');
+    var d=new Date(c.ts);
+    html+='<div class="stop" style="animation-delay:'+(i*0.05)+'s"><span class="node"></span>'+
+      '<div class="dt"><div class="dnum">'+d.getUTCDate()+'</div><div class="dday">'+c.day.slice(0,3)+'</div></div>'+
+      '<div class="mini">'+mini+'</div>'+(c.estimated?'<span class="tagx">est</span>':'')+'</div>';
+    i++;
+  });
+  document.getElementById('tl').innerHTML = html;
+
+  var scrim=document.getElementById('scrim'), sheet=document.getElementById('sheet');
+  function open(){scrim.classList.add('open');sheet.classList.add('open');sheet.setAttribute('aria-hidden','false');}
+  function close(){scrim.classList.remove('open');sheet.classList.remove('open');sheet.setAttribute('aria-hidden','true');}
+  document.getElementById('openCal').onclick=open;
+  document.getElementById('closeCal').onclick=close;
+  scrim.onclick=close;
 })();
 </script>
 </body>
